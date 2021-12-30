@@ -1,4 +1,4 @@
-﻿# Prueba técnica Labovida
+﻿# Prueba técnica Labovida David Zúñiga
  
  La siguiente prueba consta de una aplicacion web realizada en Aspnet MVC para la selección de comics, se deberá realizar el fork del 
  repositorio en sus cuentas de github y clonarlas en sus respectivos ambientes, además se debe de crear un documento Word con capturas que reflejen el resultado de todos los   puntos al correo sistemas@grupolabovida.com
