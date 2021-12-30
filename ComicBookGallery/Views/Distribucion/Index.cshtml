@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ComicBookGallery.Models.Venta>
+
+@{
+    ViewBag.Title = "Ventas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            <label><b>Comic</b></label>
+        </th>
+        <th>
+            <label><b>Fecha Venta</b></label>
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComicBook.SeriesTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVenta)
+        </td>        
+    </tr>
+}
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model ComicBookGallery.Models.ventas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ventas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comic.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comic.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_venta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

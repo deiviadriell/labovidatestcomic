@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ComicBookGallery.Models.ventas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comic.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comic.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_venta }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_venta }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_venta })
+        </td>
+    </tr>
+}
+
+</table>

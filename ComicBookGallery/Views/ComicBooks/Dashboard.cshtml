@@ -1,0 +1,26 @@
+﻿@model IEnumerable <ComicBookGallery.Models.Result>
+@{
+    ViewBag.Title = "Dashboard";  
+    ViewBag.ShowBackBar = true;
+}
+<script type="text/javascript" src="~/scripts/jquery-1.10.2.js"></script>
+<h2>Dashboard</h2>
+
+@using (Html.BeginForm("Busqueda", "ComicBooks"))
+{
+    <input type="submit" value="Busqueda" class="btn btn-default" />
+}
+
+@if (Model!=null)
+{   
+            <div>
+                <ul>
+                    @foreach (var comic in Model)
+                {
+                      
+                        <li>@comic.nombre: @comic.fecha</li>
+                     
+                    }
+                </ul>
+            </div>
+}
